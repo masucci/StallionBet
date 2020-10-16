@@ -15,21 +15,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="Cloth Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIy-KD-RNO">
-                        <rect key="frame" x="16" y="10" width="234" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cloth Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIy-KD-RNO">
+                        <rect key="frame" x="16" y="10" width="269" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-Uq-AR8">
-                        <rect key="frame" x="294.5" y="0.0" width="80.5" height="80"/>
+                        <rect key="frame" x="295" y="0.0" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="HjW-5B-4mx"/>
+                            <constraint firstAttribute="height" constant="80" id="LKD-ig-y5V"/>
+                        </constraints>
                         <state key="normal" title="Odd"/>
-                        <connections>
-                            <action selector="oddButtonPressed:" destination="2Sz-Lj-uOI" eventType="touchUpInside" id="teI-fQ-KZV"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTU-5i-AMU">
-                        <rect key="frame" x="16" y="36" width="234" height="44"/>
+                        <rect key="frame" x="16" y="36" width="269" height="44"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,9 +38,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="mIy-KD-RNO" firstAttribute="leading" secondItem="xX2-fJ-ega" secondAttribute="leading" constant="16" id="23h-4t-u4M"/>
-                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="wTU-5i-AMU" secondAttribute="trailing" constant="44.5" id="4KY-bk-65P"/>
+                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="wTU-5i-AMU" secondAttribute="trailing" constant="10" id="4KY-bk-65P"/>
                     <constraint firstAttribute="trailing" secondItem="5v6-Uq-AR8" secondAttribute="trailing" id="BVx-Nl-0kt"/>
-                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="mIy-KD-RNO" secondAttribute="trailing" constant="172" id="KHT-OF-VRg"/>
+                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="mIy-KD-RNO" secondAttribute="trailing" constant="10" id="KHT-OF-VRg"/>
                     <constraint firstItem="5v6-Uq-AR8" firstAttribute="centerY" secondItem="xX2-fJ-ega" secondAttribute="centerY" id="WUD-j4-6Pl"/>
                     <constraint firstItem="5v6-Uq-AR8" firstAttribute="top" secondItem="xX2-fJ-ega" secondAttribute="top" id="jFS-ZT-F4S"/>
                     <constraint firstItem="mIy-KD-RNO" firstAttribute="top" secondItem="xX2-fJ-ega" secondAttribute="top" constant="10" id="jtb-iN-vcM"/>

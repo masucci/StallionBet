@@ -38,7 +38,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmt-QI-avr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="665" y="108"/>
+            <point key="canvasLocation" x="1573.913043478261" y="107.8125"/>
         </scene>
         <!--Race Details View-->
         <scene sceneID="a8S-IN-mS8">
@@ -49,7 +49,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jxx-aL-Y1S">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="277" width="414" height="585"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="JOe-qg-xiV" id="26i-CG-iQu"/>
@@ -88,13 +88,13 @@
                         <viewLayoutGuide key="safeArea" id="2EX-mA-yAA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jxx-aL-Y1S" firstAttribute="top" secondItem="2EX-mA-yAA" secondAttribute="top" id="Dsf-bA-WQq"/>
                             <constraint firstItem="2ty-5y-8Vg" firstAttribute="top" secondItem="2EX-mA-yAA" secondAttribute="top" constant="1" id="JYy-uT-bX3"/>
+                            <constraint firstItem="jxx-aL-Y1S" firstAttribute="top" secondItem="2ty-5y-8Vg" secondAttribute="bottom" id="Nga-VH-W5c"/>
                             <constraint firstItem="2ty-5y-8Vg" firstAttribute="trailing" secondItem="jxx-aL-Y1S" secondAttribute="trailing" id="QN1-X0-MVc"/>
                             <constraint firstItem="jxx-aL-Y1S" firstAttribute="trailing" secondItem="2EX-mA-yAA" secondAttribute="trailing" id="lSp-pa-aDC"/>
                             <constraint firstItem="2ty-5y-8Vg" firstAttribute="leading" secondItem="jxx-aL-Y1S" secondAttribute="leading" id="lYK-q5-h9D"/>
                             <constraint firstItem="jxx-aL-Y1S" firstAttribute="leading" secondItem="2EX-mA-yAA" secondAttribute="leading" id="m9c-EL-78H"/>
-                            <constraint firstItem="2ty-5y-8Vg" firstAttribute="height" secondItem="jxx-aL-Y1S" secondAttribute="height" multiplier="0.242894" id="r8i-gH-Phm"/>
+                            <constraint firstItem="2ty-5y-8Vg" firstAttribute="height" secondItem="jxx-aL-Y1S" secondAttribute="height" multiplier="0.242894" constant="45.907010000000014" id="r8i-gH-Phm"/>
                             <constraint firstItem="jxx-aL-Y1S" firstAttribute="bottom" secondItem="2EX-mA-yAA" secondAttribute="bottom" id="zGT-OI-Lcy"/>
                         </constraints>
                     </view>
@@ -107,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmz-u4-9sZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1444.9275362318842" y="101.78571428571428"/>
+            <point key="canvasLocation" x="2355.072463768116" y="101.78571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gaO-XR-awI">
@@ -125,7 +125,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PL0-eV-hdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-18.840579710144929" y="107.8125"/>
+            <point key="canvasLocation" x="61" y="102"/>
         </scene>
     </scenes>
     <resources>

@@ -24,13 +24,12 @@ class OddCellView: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    @IBAction func oddButtonPressed(_ sender: UIButton) {
-    }
+
     
     func configureCell(for result: [Ride], indexPath: IndexPath) {
         clothNumberLabel.text = String(result[indexPath.row].cloth_number)
         horseLabel.text = result[indexPath.row].horse.name
-        oddButton.titleLabel?.text = result[indexPath.row].current_odds
+        oddButton.setTitle(result[indexPath.row].current_odds, for: .normal)
         
     }
 }
