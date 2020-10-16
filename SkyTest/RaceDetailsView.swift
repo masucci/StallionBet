@@ -12,22 +12,40 @@ import SafariServices
 class RaceDetailsView: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var raceName: UILabel!
-    @IBOutlet weak var courseName: UILabel!
+    @IBOutlet weak var raceNameLabel: UILabel!
+    @IBOutlet weak var courseNameLabel: UILabel!
     
     
-    var name = ""
+    var raceName = ""
+    var courseName = ""
+    
     var ridesInfo: [Ride] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        raceName.text = name
-        courseName.text = name
+        raceNameLabel.text = raceName
+        courseNameLabel.text = courseName
         
         let cellNib = UINib(nibName: "OddCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "OddCell")
         
+    }
+    @IBAction func filterButtonPressed(_ sender: UIBarButtonItem) {
+        let filterMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        
+        let orderByClothNumber = UIAlertAction(title: "Cloth", style: .default) { [self] (alertAction) in
+            ridesInfo = ridesInfo.filter{$0.cloth_number.isMultiple(of: 1)}.sorted{ $0.cloth_number < $1.cloth_number }
+            tableView.reloadData()
+        }
+//        let orderByOdds = ""
+//        let orderByForm = ""
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        filterMenu.addAction(orderByClothNumber)
+        filterMenu.addAction(cancelAction)
+        
+        self.present(filterMenu, animated: true, completion: nil)
     }
     
 

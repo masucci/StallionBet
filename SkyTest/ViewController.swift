@@ -65,7 +65,7 @@ class ViewController: UITableViewController {
     }
     
     func performRequest() {
-        let url = jsonURL(url: "https://api.jsonbin.io/b/5f89471d7243cd7e824fd710")
+        let url = jsonURL(url: "https://api.jsonbin.io/b/5f89471d7243cd7e824fd710/1")
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url) { (data, response, error) in
             guard error == nil, let data = data else {
@@ -100,7 +100,9 @@ class ViewController: UITableViewController {
         if segue.identifier == "Rides" {
             let indexPath = sender as! IndexPath
             let view = segue.destination as! RaceDetailsView
-            view.name = raceInfo[indexPath.row].race_summary.name
+            view.raceName = raceInfo[indexPath.row].race_summary.name
+            view.courseName = raceInfo[indexPath.row].race_summary.course_name
+            
             view.ridesInfo = raceInfo[indexPath.row].rides
         }
     }

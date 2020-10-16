@@ -98,10 +98,16 @@
                             <constraint firstItem="jxx-aL-Y1S" firstAttribute="bottom" secondItem="2EX-mA-yAA" secondAttribute="bottom" id="zGT-OI-Lcy"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="I2k-dp-6gf"/>
+                    <navigationItem key="navigationItem" id="I2k-dp-6gf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="line.horizontal.3.decrease" catalog="system" id="nky-Wm-iLg">
+                            <connections>
+                                <action selector="filterButtonPressed:" destination="JOe-qg-xiV" id="JER-Nb-8Xe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="courseName" destination="4kr-HR-58b" id="7VM-uf-15i"/>
-                        <outlet property="raceName" destination="qmD-17-hns" id="lbb-2A-u5d"/>
+                        <outlet property="courseNameLabel" destination="4kr-HR-58b" id="L2N-zu-7VS"/>
+                        <outlet property="raceNameLabel" destination="qmD-17-hns" id="8mM-Jm-GoW"/>
                         <outlet property="tableView" destination="jxx-aL-Y1S" id="kp7-Yg-lUh"/>
                     </connections>
                 </viewController>
@@ -125,10 +131,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PL0-eV-hdw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="102"/>
+            <point key="canvasLocation" x="299" y="102"/>
         </scene>
     </scenes>
     <resources>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
