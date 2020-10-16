@@ -26,23 +26,29 @@ class RaceDetailsView: UIViewController {
         
         raceNameLabel.text = raceName
         courseNameLabel.text = courseName
-        
+       
         let cellNib = UINib(nibName: "OddCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "OddCell")
         
     }
     @IBAction func filterButtonPressed(_ sender: UIBarButtonItem) {
-        let filterMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        let filterMenu = UIAlertController(title: "Order by:", message: "Choose Option", preferredStyle: .actionSheet)
         
-        let orderByClothNumber = UIAlertAction(title: "Cloth", style: .default) { [self] (alertAction) in
-            ridesInfo = ridesInfo.filter{$0.cloth_number.isMultiple(of: 1)}.sorted{ $0.cloth_number < $1.cloth_number }
-            tableView.reloadData()
+        let orderByClothNumber = UIAlertAction(title: "Cloth", style: .default) { (_) in
+            self.ridesInfo = self.ridesInfo.filter{$0.cloth_number.isMultiple(of: 1)}.sorted{ $0.cloth_number < $1.cloth_number }
+            print((self.ridesInfo[0].current_odds as NSString).floatValue)
+        
+            self.tableView.reloadData()
         }
-//        let orderByOdds = ""
+        let orderByOdds = UIAlertAction(title: "Odds", style: .default) { (_) in
+            self.ridesInfo = self.ridesInfo.filter{$0.current_odds.isEmpty == false }.sorted{ ($0.current_odds as NSString).floatValue < ($1.current_odds as NSString).floatValue }
+            self.tableView.reloadData()
+        }
 //        let orderByForm = ""
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         filterMenu.addAction(orderByClothNumber)
+        filterMenu.addAction(orderByOdds)
         filterMenu.addAction(cancelAction)
         
         self.present(filterMenu, animated: true, completion: nil)
