@@ -65,6 +65,15 @@ class ViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "Rides", sender: indexPath)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Rides" {
+            let indexPath = sender as! IndexPath
+            let view = segue.destination as! RaceDetailsView
+            view.name = raceInfo[indexPath.row].race_summary.name
+            view.ridesInfo = raceInfo[indexPath.row].rides
+        }
+    }
 
 }
 

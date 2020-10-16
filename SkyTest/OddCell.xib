@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OddCell" id="2Sz-Lj-uOI" customClass="OddCellView" customModule="SkyTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Sz-Lj-uOI" id="xX2-fJ-ega">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="Cloth Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIy-KD-RNO">
+                        <rect key="frame" x="16" y="10" width="234" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-Uq-AR8">
+                        <rect key="frame" x="294.5" y="0.0" width="80.5" height="80"/>
+                        <state key="normal" title="Odd"/>
+                        <connections>
+                            <action selector="oddButtonPressed:" destination="2Sz-Lj-uOI" eventType="touchUpInside" id="teI-fQ-KZV"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTU-5i-AMU">
+                        <rect key="frame" x="16" y="36" width="234" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mIy-KD-RNO" firstAttribute="leading" secondItem="xX2-fJ-ega" secondAttribute="leading" constant="16" id="23h-4t-u4M"/>
+                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="wTU-5i-AMU" secondAttribute="trailing" constant="44.5" id="4KY-bk-65P"/>
+                    <constraint firstAttribute="trailing" secondItem="5v6-Uq-AR8" secondAttribute="trailing" id="BVx-Nl-0kt"/>
+                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="mIy-KD-RNO" secondAttribute="trailing" constant="172" id="KHT-OF-VRg"/>
+                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="centerY" secondItem="xX2-fJ-ega" secondAttribute="centerY" id="WUD-j4-6Pl"/>
+                    <constraint firstItem="5v6-Uq-AR8" firstAttribute="top" secondItem="xX2-fJ-ega" secondAttribute="top" id="jFS-ZT-F4S"/>
+                    <constraint firstItem="mIy-KD-RNO" firstAttribute="top" secondItem="xX2-fJ-ega" secondAttribute="top" constant="10" id="jtb-iN-vcM"/>
+                    <constraint firstItem="wTU-5i-AMU" firstAttribute="top" secondItem="mIy-KD-RNO" secondAttribute="bottom" constant="5" id="rUb-TQ-ZHw"/>
+                    <constraint firstItem="wTU-5i-AMU" firstAttribute="leading" secondItem="xX2-fJ-ega" secondAttribute="leading" constant="16" id="sAp-v2-eKI"/>
+                    <constraint firstAttribute="bottom" secondItem="5v6-Uq-AR8" secondAttribute="bottom" id="tPB-qf-b4c"/>
+                    <constraint firstAttribute="bottom" secondItem="wTU-5i-AMU" secondAttribute="bottom" id="tqM-XA-8g1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="clothNumberLabel" destination="mIy-KD-RNO" id="hEH-j1-uGd"/>
+                <outlet property="horseLabel" destination="wTU-5i-AMU" id="m1u-L5-kJC"/>
+                <outlet property="oddButton" destination="5v6-Uq-AR8" id="752-Rj-OUc"/>
+            </connections>
+            <point key="canvasLocation" x="332.60869565217394" y="49.553571428571423"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -40,21 +40,74 @@
             </objects>
             <point key="canvasLocation" x="665" y="108"/>
         </scene>
-        <!--View Controller-->
+        <!--Race Details View-->
         <scene sceneID="a8S-IN-mS8">
             <objects>
-                <viewController id="JOe-qg-xiV" sceneMemberID="viewController">
+                <viewController id="JOe-qg-xiV" customClass="RaceDetailsView" customModule="SkyTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PZV-Ym-nZo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jxx-aL-Y1S">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="JOe-qg-xiV" id="26i-CG-iQu"/>
+                                    <outlet property="delegate" destination="JOe-qg-xiV" id="SN9-Pn-GOW"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ty-5y-8Vg">
+                                <rect key="frame" x="0.0" y="89" width="414" height="188"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Race Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qmD-17-hns">
+                                        <rect key="frame" x="0.0" y="33" width="414" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4kr-HR-58b">
+                                        <rect key="frame" x="0.0" y="91" width="414" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="4kr-HR-58b" firstAttribute="centerX" secondItem="2ty-5y-8Vg" secondAttribute="centerX" id="2lu-ZE-ulK"/>
+                                    <constraint firstAttribute="trailing" secondItem="4kr-HR-58b" secondAttribute="trailing" id="5M9-Vj-YHc"/>
+                                    <constraint firstAttribute="trailing" secondItem="qmD-17-hns" secondAttribute="trailing" id="FYv-cK-8wp"/>
+                                    <constraint firstItem="qmD-17-hns" firstAttribute="centerX" secondItem="2ty-5y-8Vg" secondAttribute="centerX" id="GIm-SN-DPe"/>
+                                    <constraint firstAttribute="bottom" secondItem="4kr-HR-58b" secondAttribute="bottom" constant="67" id="Lel-i0-foC"/>
+                                    <constraint firstItem="qmD-17-hns" firstAttribute="top" secondItem="2ty-5y-8Vg" secondAttribute="top" constant="33" id="Qa4-hQ-Ff3"/>
+                                    <constraint firstItem="qmD-17-hns" firstAttribute="leading" secondItem="2ty-5y-8Vg" secondAttribute="leading" id="XMs-fH-w51"/>
+                                    <constraint firstItem="4kr-HR-58b" firstAttribute="leading" secondItem="2ty-5y-8Vg" secondAttribute="leading" id="eQq-9s-iaU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2EX-mA-yAA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jxx-aL-Y1S" firstAttribute="top" secondItem="2EX-mA-yAA" secondAttribute="top" id="Dsf-bA-WQq"/>
+                            <constraint firstItem="2ty-5y-8Vg" firstAttribute="top" secondItem="2EX-mA-yAA" secondAttribute="top" constant="1" id="JYy-uT-bX3"/>
+                            <constraint firstItem="2ty-5y-8Vg" firstAttribute="trailing" secondItem="jxx-aL-Y1S" secondAttribute="trailing" id="QN1-X0-MVc"/>
+                            <constraint firstItem="jxx-aL-Y1S" firstAttribute="trailing" secondItem="2EX-mA-yAA" secondAttribute="trailing" id="lSp-pa-aDC"/>
+                            <constraint firstItem="2ty-5y-8Vg" firstAttribute="leading" secondItem="jxx-aL-Y1S" secondAttribute="leading" id="lYK-q5-h9D"/>
+                            <constraint firstItem="jxx-aL-Y1S" firstAttribute="leading" secondItem="2EX-mA-yAA" secondAttribute="leading" id="m9c-EL-78H"/>
+                            <constraint firstItem="2ty-5y-8Vg" firstAttribute="height" secondItem="jxx-aL-Y1S" secondAttribute="height" multiplier="0.242894" id="r8i-gH-Phm"/>
+                            <constraint firstItem="jxx-aL-Y1S" firstAttribute="bottom" secondItem="2EX-mA-yAA" secondAttribute="bottom" id="zGT-OI-Lcy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="I2k-dp-6gf"/>
+                    <connections>
+                        <outlet property="courseName" destination="4kr-HR-58b" id="7VM-uf-15i"/>
+                        <outlet property="raceName" destination="qmD-17-hns" id="lbb-2A-u5d"/>
+                        <outlet property="tableView" destination="jxx-aL-Y1S" id="kp7-Yg-lUh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qmz-u4-9sZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="102"/>
+            <point key="canvasLocation" x="1444.9275362318842" y="101.78571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gaO-XR-awI">

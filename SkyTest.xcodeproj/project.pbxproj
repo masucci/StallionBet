@@ -14,6 +14,9 @@
 		882F082A253988F80027A70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882F0829253988F80027A70C /* Assets.xcassets */; };
 		882F082D253988F80027A70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882F082B253988F80027A70C /* LaunchScreen.storyboard */; };
 		882F0836253989F10027A70C /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F0835253989F10027A70C /* Races.swift */; };
+		882F083E253997EC0027A70C /* RaceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F083D253997EC0027A70C /* RaceDetailsView.swift */; };
+		88E59E9D2539A059001F2F68 /* OddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E59E9C2539A059001F2F68 /* OddCell.xib */; };
+		88E59EA02539A331001F2F68 /* OddCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E59E9F2539A331001F2F68 /* OddCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		882F082C253988F80027A70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		882F082E253988F80027A70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882F0835253989F10027A70C /* Races.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
+		882F083D253997EC0027A70C /* RaceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailsView.swift; sourceTree = "<group>"; };
+		88E59E9C2539A059001F2F68 /* OddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OddCell.xib; sourceTree = "<group>"; };
+		88E59E9F2539A331001F2F68 /* OddCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				882F0820253988F60027A70C /* AppDelegate.swift */,
 				882F0822253988F60027A70C /* SceneDelegate.swift */,
 				882F0824253988F60027A70C /* ViewController.swift */,
+				882F083D253997EC0027A70C /* RaceDetailsView.swift */,
+				88E59E9F2539A331001F2F68 /* OddCellView.swift */,
+				88E59E9C2539A059001F2F68 /* OddCell.xib */,
 				882F0835253989F10027A70C /* Races.swift */,
 				882F0826253988F60027A70C /* Main.storyboard */,
 				882F0829253988F80027A70C /* Assets.xcassets */,
@@ -130,6 +139,7 @@
 				882F082D253988F80027A70C /* LaunchScreen.storyboard in Resources */,
 				882F082A253988F80027A70C /* Assets.xcassets in Resources */,
 				882F0828253988F60027A70C /* Main.storyboard in Resources */,
+				88E59E9D2539A059001F2F68 /* OddCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +152,10 @@
 			files = (
 				882F0836253989F10027A70C /* Races.swift in Sources */,
 				882F0825253988F60027A70C /* ViewController.swift in Sources */,
+				88E59EA02539A331001F2F68 /* OddCellView.swift in Sources */,
 				882F0821253988F60027A70C /* AppDelegate.swift in Sources */,
 				882F0823253988F60027A70C /* SceneDelegate.swift in Sources */,
+				882F083E253997EC0027A70C /* RaceDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
