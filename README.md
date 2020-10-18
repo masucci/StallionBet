@@ -7,7 +7,7 @@ Sky Test
 <br />
 <p align="center">
   <a href="https://github.com/masucci/StallionBet">
-    <img src="images/logo.png" alt="Logo" width="180" height="180">
+    <img src="images/logo.png" alt="Logo" width="300" height="353">
   </a>
 
   <h3 align="center">Stallion Bet</h3>
