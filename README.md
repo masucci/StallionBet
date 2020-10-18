@@ -18,7 +18,7 @@ Sky Test
     <a href="https://github.com/masucci/StallionBet"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://drive.google.com/">View Demo</a>
+    <a href="https://drive.google.com/file/d/1orz-TDLVhqx0X7EUY03RYffP7y3r-wRD/view?usp=sharing">View Demo</a>
   </p>
 </p>
 
