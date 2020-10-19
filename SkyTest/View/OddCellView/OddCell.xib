@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,15 +23,23 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-Uq-AR8">
-                        <rect key="frame" x="295" y="0.0" width="80" height="80"/>
+                        <rect key="frame" x="295" y="2" width="80" height="76"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="HjW-5B-4mx"/>
                             <constraint firstAttribute="height" constant="80" id="LKD-ig-y5V"/>
                         </constraints>
-                        <state key="normal" title="Odd"/>
+                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
+                        <color key="tintColor" name="CellColor"/>
+                        <state key="normal" title="Odd" backgroundImage="stop" catalog="system"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTU-5i-AMU">
-                        <rect key="frame" x="16" y="36" width="269" height="44"/>
+                        <rect key="frame" x="16" y="34" width="269" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F89-zg-k2R">
+                        <rect key="frame" x="16" y="58" width="269" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,22 +49,31 @@
                     <constraint firstItem="mIy-KD-RNO" firstAttribute="leading" secondItem="xX2-fJ-ega" secondAttribute="leading" constant="16" id="23h-4t-u4M"/>
                     <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="wTU-5i-AMU" secondAttribute="trailing" constant="10" id="4KY-bk-65P"/>
                     <constraint firstAttribute="trailing" secondItem="5v6-Uq-AR8" secondAttribute="trailing" id="BVx-Nl-0kt"/>
+                    <constraint firstAttribute="trailing" secondItem="F89-zg-k2R" secondAttribute="trailing" constant="90" id="FJ4-j6-TFW"/>
                     <constraint firstItem="5v6-Uq-AR8" firstAttribute="leading" secondItem="mIy-KD-RNO" secondAttribute="trailing" constant="10" id="KHT-OF-VRg"/>
+                    <constraint firstItem="F89-zg-k2R" firstAttribute="leading" secondItem="xX2-fJ-ega" secondAttribute="leading" constant="16" id="Ubm-yA-2Is"/>
                     <constraint firstItem="5v6-Uq-AR8" firstAttribute="centerY" secondItem="xX2-fJ-ega" secondAttribute="centerY" id="WUD-j4-6Pl"/>
                     <constraint firstItem="5v6-Uq-AR8" firstAttribute="top" secondItem="xX2-fJ-ega" secondAttribute="top" id="jFS-ZT-F4S"/>
                     <constraint firstItem="mIy-KD-RNO" firstAttribute="top" secondItem="xX2-fJ-ega" secondAttribute="top" constant="10" id="jtb-iN-vcM"/>
-                    <constraint firstItem="wTU-5i-AMU" firstAttribute="top" secondItem="mIy-KD-RNO" secondAttribute="bottom" constant="5" id="rUb-TQ-ZHw"/>
+                    <constraint firstItem="F89-zg-k2R" firstAttribute="top" secondItem="wTU-5i-AMU" secondAttribute="bottom" constant="3" id="lBd-M2-Qsn"/>
+                    <constraint firstItem="wTU-5i-AMU" firstAttribute="top" secondItem="mIy-KD-RNO" secondAttribute="bottom" constant="3" id="rUb-TQ-ZHw"/>
                     <constraint firstItem="wTU-5i-AMU" firstAttribute="leading" secondItem="xX2-fJ-ega" secondAttribute="leading" constant="16" id="sAp-v2-eKI"/>
                     <constraint firstAttribute="bottom" secondItem="5v6-Uq-AR8" secondAttribute="bottom" id="tPB-qf-b4c"/>
-                    <constraint firstAttribute="bottom" secondItem="wTU-5i-AMU" secondAttribute="bottom" id="tqM-XA-8g1"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="clothNumberLabel" destination="mIy-KD-RNO" id="hEH-j1-uGd"/>
+                <outlet property="formLabel" destination="F89-zg-k2R" id="pLX-tV-UWO"/>
                 <outlet property="horseLabel" destination="wTU-5i-AMU" id="m1u-L5-kJC"/>
                 <outlet property="oddButton" destination="5v6-Uq-AR8" id="752-Rj-OUc"/>
             </connections>
             <point key="canvasLocation" x="332.60869565217394" y="49.553571428571423"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="stop" catalog="system" width="128" height="113"/>
+        <namedColor name="CellColor">
+            <color red="0.0" green="0.075000002980232239" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

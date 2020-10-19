@@ -25,6 +25,8 @@ struct Ride: Codable {
     let cloth_number: Int
     let horse: HorseInfo
     let current_odds: String
+    let formsummary: String
+
 }
 
 struct HorseInfo: Codable {

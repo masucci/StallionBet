@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		882F0821253988F60027A70C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F0820253988F60027A70C /* AppDelegate.swift */; };
 		882F0823253988F60027A70C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F0822253988F60027A70C /* SceneDelegate.swift */; };
-		882F0825253988F60027A70C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F0824253988F60027A70C /* ViewController.swift */; };
+		882F0825253988F60027A70C /* RaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F0824253988F60027A70C /* RaceViewController.swift */; };
 		882F0828253988F60027A70C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882F0826253988F60027A70C /* Main.storyboard */; };
 		882F082A253988F80027A70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882F0829253988F80027A70C /* Assets.xcassets */; };
 		882F082D253988F80027A70C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 882F082B253988F80027A70C /* LaunchScreen.storyboard */; };
 		882F0836253989F10027A70C /* Races.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F0835253989F10027A70C /* Races.swift */; };
 		882F083E253997EC0027A70C /* RaceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882F083D253997EC0027A70C /* RaceDetailsView.swift */; };
+		883492A6253CE23C00F46BA1 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883492A5253CE23C00F46BA1 /* LoadingCell.xib */; };
+		8875F63A2539FA480050CDD1 /* RaceCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8875F6392539FA480050CDD1 /* RaceCellView.swift */; };
+		88890733253A1D7700BCA0ED /* RaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88890732253A1D7700BCA0ED /* RaceCell.xib */; };
+		889F75A1253CCFC50046C7ED /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889F75A0253CCFC50046C7ED /* AuthenticationView.swift */; };
 		88E59E9D2539A059001F2F68 /* OddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E59E9C2539A059001F2F68 /* OddCell.xib */; };
 		88E59EA02539A331001F2F68 /* OddCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E59E9F2539A331001F2F68 /* OddCellView.swift */; };
 /* End PBXBuildFile section */
@@ -23,13 +27,17 @@
 		882F081D253988F60027A70C /* SkyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		882F0820253988F60027A70C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		882F0822253988F60027A70C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		882F0824253988F60027A70C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		882F0824253988F60027A70C /* RaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceViewController.swift; sourceTree = "<group>"; };
 		882F0827253988F60027A70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		882F0829253988F80027A70C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		882F082C253988F80027A70C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		882F082E253988F80027A70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882F0835253989F10027A70C /* Races.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
 		882F083D253997EC0027A70C /* RaceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailsView.swift; sourceTree = "<group>"; };
+		883492A5253CE23C00F46BA1 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingCell.xib; path = ../../StoreSearch/StoreSearch/LoadingCell.xib; sourceTree = "<group>"; };
+		8875F6392539FA480050CDD1 /* RaceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCellView.swift; sourceTree = "<group>"; };
+		88890732253A1D7700BCA0ED /* RaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RaceCell.xib; sourceTree = "<group>"; };
+		889F75A0253CCFC50046C7ED /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		88E59E9C2539A059001F2F68 /* OddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OddCell.xib; sourceTree = "<group>"; };
 		88E59E9F2539A331001F2F68 /* OddCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,17 +74,61 @@
 			children = (
 				882F0820253988F60027A70C /* AppDelegate.swift */,
 				882F0822253988F60027A70C /* SceneDelegate.swift */,
-				882F0824253988F60027A70C /* ViewController.swift */,
-				882F083D253997EC0027A70C /* RaceDetailsView.swift */,
-				88E59E9F2539A331001F2F68 /* OddCellView.swift */,
-				88E59E9C2539A059001F2F68 /* OddCell.xib */,
-				882F0835253989F10027A70C /* Races.swift */,
+				8878A364253B44C900826602 /* Controller */,
+				8878A365253B44E600826602 /* View */,
+				8878A366253B44F000826602 /* Model */,
 				882F0826253988F60027A70C /* Main.storyboard */,
+				883492A5253CE23C00F46BA1 /* LoadingCell.xib */,
 				882F0829253988F80027A70C /* Assets.xcassets */,
 				882F082B253988F80027A70C /* LaunchScreen.storyboard */,
 				882F082E253988F80027A70C /* Info.plist */,
 			);
 			path = SkyTest;
+			sourceTree = "<group>";
+		};
+		883492A9253D86CB00F46BA1 /* RaceCellView */ = {
+			isa = PBXGroup;
+			children = (
+				8875F6392539FA480050CDD1 /* RaceCellView.swift */,
+				88890732253A1D7700BCA0ED /* RaceCell.xib */,
+			);
+			path = RaceCellView;
+			sourceTree = "<group>";
+		};
+		883492AC253D86ED00F46BA1 /* OddCellView */ = {
+			isa = PBXGroup;
+			children = (
+				88E59E9F2539A331001F2F68 /* OddCellView.swift */,
+				88E59E9C2539A059001F2F68 /* OddCell.xib */,
+			);
+			path = OddCellView;
+			sourceTree = "<group>";
+		};
+		8878A364253B44C900826602 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				882F0824253988F60027A70C /* RaceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8878A365253B44E600826602 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				889F75A0253CCFC50046C7ED /* AuthenticationView.swift */,
+				882F083D253997EC0027A70C /* RaceDetailsView.swift */,
+				883492A9253D86CB00F46BA1 /* RaceCellView */,
+				883492AC253D86ED00F46BA1 /* OddCellView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8878A366253B44F000826602 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				882F0835253989F10027A70C /* Races.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +188,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883492A6253CE23C00F46BA1 /* LoadingCell.xib in Resources */,
 				882F082D253988F80027A70C /* LaunchScreen.storyboard in Resources */,
 				882F082A253988F80027A70C /* Assets.xcassets in Resources */,
+				88890733253A1D7700BCA0ED /* RaceCell.xib in Resources */,
 				882F0828253988F60027A70C /* Main.storyboard in Resources */,
 				88E59E9D2539A059001F2F68 /* OddCell.xib in Resources */,
 			);
@@ -151,10 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				882F0836253989F10027A70C /* Races.swift in Sources */,
-				882F0825253988F60027A70C /* ViewController.swift in Sources */,
+				8875F63A2539FA480050CDD1 /* RaceCellView.swift in Sources */,
+				882F0825253988F60027A70C /* RaceViewController.swift in Sources */,
 				88E59EA02539A331001F2F68 /* OddCellView.swift in Sources */,
 				882F0821253988F60027A70C /* AppDelegate.swift in Sources */,
 				882F0823253988F60027A70C /* SceneDelegate.swift in Sources */,
+				889F75A1253CCFC50046C7ED /* AuthenticationView.swift in Sources */,
 				882F083E253997EC0027A70C /* RaceDetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +368,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lormas.SkyTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -331,7 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = lormas.SkyTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

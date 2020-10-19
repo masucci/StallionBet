@@ -1,52 +1,36 @@
 //
-//  ViewController.swift
+//  RaceViewController.swift
 //  SkyTest
 //
 //  Created by Lorenzo on 16/10/2020.
 //
 
 import UIKit
-import LocalAuthentication
 
-class ViewController: UITableViewController {
+class RaceViewController: UITableViewController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         performRequest()
+        tableView.separatorStyle = .none
         
+        var cellNib = UINib(nibName: "RaceCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "RaceCell")
+        
+        cellNib = UINib(nibName: "LoadingCell", bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: "LoadingCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
     
     var raceInfo = [RaceInfo]()
-
-    /* AUTHENTICATION TEST
-    func authentication() {
-        let context = LAContext()
-        var error: NSError?
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            let reason = "Identify yourself!"
-            
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
-                [weak self] success, authenticationError in
-                
-                DispatchQueue.main.async {
-                    if success {
-                        print("Success")
-                        self!.performRequest()
-                    } else {
-                        let ac = UIAlertController(title: "Authentication failed", message: "You could not be verified; please try again.", preferredStyle: .alert)
-                        ac.addAction(UIAlertAction(title: "OK", style: .default))
-                        self!.present(ac, animated: true)
-                    }
-                }
-            }
-        } else {
-            let ac = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(ac, animated: true)
-        }
-    }
- */
+    let imageShields = [UIImage(named: "Shield1"), UIImage(named: "Shield2"),UIImage(named: "Shield3"),UIImage(named: "Shield4"),UIImage(named: "Shield5"),UIImage(named: "Shield6"),UIImage(named: "Shield7"),UIImage(named: "Shield8"), UIImage(named: "Shield9"),UIImage(named: "Shield10") ]
+    var isLoading = false
+    
     //MARK: - Helper Methods
     func jsonURL(url: String) -> URL {
         let url = URL(string: url)
@@ -65,6 +49,7 @@ class ViewController: UITableViewController {
     }
     
     func performRequest() {
+        isLoading = true
         let url = jsonURL(url: "https://api.jsonbin.io/b/5f89471d7243cd7e824fd710/1")
         let session = URLSession.shared
         let dataTask = session.dataTask(with: url) { (data, response, error) in
@@ -74,6 +59,7 @@ class ViewController: UITableViewController {
             self.raceInfo = self.parse(data: data)
             
             DispatchQueue.main.async {
+                self.isLoading = false
                 self.tableView.reloadData()
             }
         }
@@ -81,18 +67,36 @@ class ViewController: UITableViewController {
     }
     
     //MARK: - TableView Methods
-    
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return raceInfo.count
+        if isLoading {
+            return 1
+        } else {
+            return raceInfo.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = raceInfo[indexPath.row].race_summary.course_name
+        if isLoading {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LoadingCell", for: indexPath)
+            let spinner = cell.viewWithTag(100) as! UIActivityIndicatorView
+            spinner.startAnimating()
+            return cell
+        } else {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RaceCell", for: indexPath) as! RaceCellView
+        cell.raceLabel.text = raceInfo[indexPath.row].race_summary.course_name
+        cell.raceImageView.image = imageShields[indexPath.row]
+        cell.raceView.layer.cornerRadius = cell.raceView.frame.height / 4
         return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "Rides", sender: indexPath)
     }
     
@@ -102,7 +106,6 @@ class ViewController: UITableViewController {
             let view = segue.destination as! RaceDetailsView
             view.raceName = raceInfo[indexPath.row].race_summary.name
             view.courseName = raceInfo[indexPath.row].race_summary.course_name
-            
             view.ridesInfo = raceInfo[indexPath.row].rides
         }
     }

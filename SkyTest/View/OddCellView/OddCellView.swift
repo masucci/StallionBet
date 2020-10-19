@@ -12,6 +12,7 @@ class OddCellView: UITableViewCell {
     @IBOutlet weak var clothNumberLabel: UILabel!
     @IBOutlet weak var horseLabel: UILabel!
     @IBOutlet weak var oddButton: UIButton!
+    @IBOutlet weak var formLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,12 +25,11 @@ class OddCellView: UITableViewCell {
         // Configure the view for the selected state
     }
     
-
-    
-    func configureCell(for result: [Ride], indexPath: IndexPath) {
-        clothNumberLabel.text = String(result[indexPath.row].cloth_number)
-        horseLabel.text = result[indexPath.row].horse.name
-        oddButton.setTitle(result[indexPath.row].current_odds, for: .normal)
+    func configureCell(clothNumber: String, horseName: String, formSummary: String, currentOdds: String) {
+        clothNumberLabel.text = "Cloth Number: \(clothNumber)"
+        horseLabel.text = "Horse: \(horseName)"
+        formLabel.text = "Form: \(formSummary)"
+        oddButton.setTitle(currentOdds, for: .normal)
         
     }
 }
