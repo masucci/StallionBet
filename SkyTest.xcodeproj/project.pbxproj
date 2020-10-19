@@ -34,7 +34,7 @@
 		882F082E253988F80027A70C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882F0835253989F10027A70C /* Races.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Races.swift; sourceTree = "<group>"; };
 		882F083D253997EC0027A70C /* RaceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailsView.swift; sourceTree = "<group>"; };
-		883492A5253CE23C00F46BA1 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingCell.xib; path = ../../StoreSearch/StoreSearch/LoadingCell.xib; sourceTree = "<group>"; };
+		883492A5253CE23C00F46BA1 /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		8875F6392539FA480050CDD1 /* RaceCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceCellView.swift; sourceTree = "<group>"; };
 		88890732253A1D7700BCA0ED /* RaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RaceCell.xib; sourceTree = "<group>"; };
 		889F75A0253CCFC50046C7ED /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
