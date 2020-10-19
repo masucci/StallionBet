@@ -28,7 +28,7 @@ Sky Test
 ![Product Name Screen Shot][product-screenshot]
 
 This is app is projected to works with iPhone with a native environment. I've used XCode as IDE. 
-In the project, all the items are displayed in a TableView. The data are downloaded from a remote JSON. Before the access you should authenticate yourself with the FaceID/TouchID. I used different Cell to help the user to understand the loading process. In the first view after the authentication, you can see displayed all the races. CLicking on a race you go to the respective page where you can find. information about the race in the header and all the odds displayed in a TableView. You can also order the odds by: Form, Odd, Cloth Number (these three value are displayed as value in the cells.) Finally clicking the odd I use Safari Services to open SkyBet webpage.
+In the project, all the items are displayed in a TableView. The data are downloaded from a remote JSON. I've used the same structure of your JSON adding 10 races. I've also modifed some of them. Before the access you should authenticate yourself with the FaceID/TouchID. I used different Cell to help the user to understand the loading process. In the first view after the authentication, you can see displayed all the races. CLicking on a race you go to the respective page where you can find. information about the race in the header and all the odds displayed in a TableView. You can also order the odds by: Form, Odd, Cloth Number (these three value are displayed as value in the cells.) Finally clicking the odd I use Safari Services to open SkyBet webpage.
 
 I also added some features like, Dark mode, little design to improve the UX/UI.
 
@@ -42,6 +42,7 @@ The project was entirely coded in Swift.
 * [UIKit](https://developer.apple.com/documentation/uikit)
 * [Safari Services](https://developer.apple.com/documentation/safariservices)
 * [Local Authentication](https://developer.apple.com/documentation/localauthentication/)
+* [JSON File](https://api.jsonbin.io/b/5f89471d7243cd7e824fd710/1)
 
 ### Contact me
 For more information about me, here you can find some contacts:
