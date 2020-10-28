@@ -1,5 +1,4 @@
 # StallionBet
-Sky Test
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
